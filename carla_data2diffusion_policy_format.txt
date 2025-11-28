@@ -1,0 +1,28 @@
+目前手头有一段数据，数据包括depth_front、depth_left、depth_rear、depth_right、measurements、parking_goal、rgb_front、rgb_left、rgb_rear、rgb_right、topdown，task,该数据一共164帧，其中括depth_front、depth_left、depth_rear、depth_right、这4个文件夹分别事前方、左侧、后方、右侧深度图像信息，每个文件夹都有164帧，measurements文件夹中对应的有164个文件，每个文件中都有这些信息：{
+    "x": 285.5999755859375,
+    "y": -240.9481
+     "z": 0.3199509382247925,
+     "pitch": 0.011023924686014652,
+     "yaw": 89.99995422363281,
+     "roll": -0.0008239744929596782,
+     "speed": 1.17575501203537,
+     "Throttle": 0.0,
+     "Steer": 0.0,
+     "Brake": 0.0,
+     "Reverse": false,
+     "Hand brake": false,
+     "Manual": false,
+    "Gear": 1,
+    "acc_x": -1868.6497802734375,
+    "acc_y": -0.0389404296875,
+    "acc_z": 158.21009，
+    "gyr_x": 0.00043186405673623085,
+    "gyr_y": -0.005771046504378319,
+    "gyr_z": 2.19573803406092，
+    "compass": 3.1415927410125732,
+    "lat": 0.00216，
+    "lon": 0.0025655882321300983
+}
+parking_goal表示泊车最终目标
+rgb_front、rgb_left、rgb_rear、rgb_right这四个文件夹中分别代表前方、左侧、候方、右侧4个方位的rgb图像，每个文件夹都是164张，topdown文件夹是对应的俯视图，task是整个过程的视频文件，
+以上数据怎么转换成和https://diffusion-policy.cs.columbia.edu/data/training/pusht.zip一样的格式
