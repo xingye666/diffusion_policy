@@ -8,6 +8,8 @@ import dill
 import math
 import wandb.sdk.data_types.video as wv
 from diffusion_policy.env.pusht.pusht_image_env import PushTImageEnv
+from diffusion_policy.env.parking.parking_image_env import ParkingImageEnv  # 你的环境
+
 from diffusion_policy.gym_util.async_vector_env import AsyncVectorEnv
 # from diffusion_policy.gym_util.sync_vector_env import SyncVectorEnv
 from diffusion_policy.gym_util.multistep_wrapper import MultiStepWrapper
@@ -47,6 +49,10 @@ class PushTImageRunner(BaseImageRunner):
                 VideoRecordingWrapper(
                     PushTImageEnv(
                         legacy=legacy_test,
+                        render_size=render_size
+                    ),
+                    ParkingImageEnv(
+                        #legacy=legacy_test,
                         render_size=render_size
                     ),
                     video_recoder=VideoRecorder.create_h264(
